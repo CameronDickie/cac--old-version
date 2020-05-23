@@ -1,0 +1,19 @@
+{
+  "name": "climate-action-carleton",
+  "version": "1.0.0",
+  "description": "an initial commit",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "cac"
+  },
+  "keywords": [
+    "cac"
+  ],
+  "author": "Cameron Dickie",
+  "license": "ISC"
+}
