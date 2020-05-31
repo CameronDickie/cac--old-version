@@ -6,9 +6,28 @@ const app = express();
 console.log("Server is running @ port 3000");
 app.listen(3000);
 
-app.get("/", function(req, res) {
+app.get("/", function(req, res, next) {
     //serve the home page and load the scripts associated with the page
-    let html = "<div>This is a test</div>"
-    res.write(html);
-    res.status(200).send();
+    res.sendFile("./views/pages/index.html", {root:"./"}, (err) => {
+        if (err) {
+            next(err);
+        }
+        console.log("Sending index page");
+    })
+})
+app.get("/vue.js", function(req, res, next) {
+    res.sendFile("./scripts/vue.js", {root:"./"}, (err) => {
+        if(err) {
+            next(err);
+        }
+        console.log("vue script was sent");
+    })
+})
+app.get("/index.js", function(req, res, next) {
+    res.sendFile("./scripts/index.js", {root: "./"}, (err) => {
+        if(err) {
+            next(err);
+        }
+        console.log("index js was sent");
+    })
 })
