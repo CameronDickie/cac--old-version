@@ -4,41 +4,104 @@
     <script src="./vue.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar justify-content-centre navbar-expand-lg navbar-light bg-success">
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
+        </button> -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-success">
+            <div class="d-flex flex-grow-1">
+                <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
+                <a class="navbar-brand d-none d-lg-inline-block" href="/">
+                    CLIMATE ACTION CARLETON
+                </a>
+                <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="/">
+                    <img src="/caclogo" alt="logo">
+                </a>
+                <div class="w-100 text-right">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse flex-grow-1 text-center" id="myNavbar">
+                <ul class="navbar-nav ml-auto flex-nowrap">
+                    <li class="nav-item">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-info" onclick="window.location.href='/about'">About Us</button>
+                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/about">About 1</a>
+                                <a class="dropdown-item" href="/about">About 2</a>
+                                <a class="dropdown-item" href="/about">About ...</a>
+                                <a class="dropdown-item" href="/about">About n</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-info" onclick="window.location.href='/about'">Divestment</button>
+                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/about">What is it?</a>
+                                <a class="dropdown-item" href="/about">Why is it important?</a>
+                                <a class="dropdown-item" href="/about">What can I do?</a>
+                                
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-info" onclick="window.location.href='/about'">Reach Out</button>
+                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/about">Contact Us</a>
+                                <a class="dropdown-item" href="/about">Join Us</a>
+                                <a class="dropdown-item" href="/about">Donation Resources</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- V1 HEADER NO SPACE -->
+                    <!-- <li class="nav-item">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                About Us
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/about">About 1</a>
+                                <a class="dropdown-item" href="/about">About 2</a>
+                                <a class="dropdown-item" href="/about">About 3</a>
+                                <a class="dropdown-item" href="/about">About ...</a>
+                                <a class="dropdown-item" href="/about">About n</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Divestment
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/divestment">What is it?</a>
+                                <a class="dropdown-item" href="/divestment">How can I help?</a>
+                                <a class="dropdown-item" href="/divestment">Sign the Petition!</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                Get in Touch
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/contact">Contact Us</a>
+                                <a class="dropdown-item" href="/contact">Join</a>
+                                <a class="dropdown-item" href="/contact">Donate</a>
+                            </div>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </nav>
     <script src="/index.js"></script>
 
     <!-- These are the scripts associated with bootstrap... do not modify-->
